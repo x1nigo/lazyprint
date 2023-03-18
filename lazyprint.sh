@@ -31,10 +31,8 @@ while true; do
 	printf "What is your printer model? "
 	read model
 	case $model in
-		1) break ;;
-		2) break ;;
-		3) break ;;
-		*) printf "Please follow the instructions. Enter a number.\n"
+		[1-3]) break ;;
+		*) printf "Please follow the instructions. Enter a number.\n" ;;
 	esac
 done
 # Prepare the necessary variables and/or help message in case your
@@ -42,7 +40,6 @@ done
 case $model in
 	1) printer="hplip" ;;
 	2) printer="foomatic-db-ppds" ;;
-	3) printf "Please visit this link to find your specific printer's driver:\n\t\033[32mhttps://wiki.archlinux.org/title/CUPS/Printer-specific_problems\033[0m\n" ;;
 esac
 
 # Download and install the printer gui and its corresponding driver.
@@ -50,3 +47,4 @@ sudo pacman -S --noconfirm system-config-printer $printer
 
 # Closing message upon successfull install.
 printf "CONGRATULATIONS! You now have a working printer system.\n"
+[ -z $printer ] && printf "Please visit this link to find your specific printer's driver:\n\t\033[32mhttps://wiki.archlinux.org/title/CUPS/Printer-specific_problems\033[0m\n"
