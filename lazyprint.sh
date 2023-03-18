@@ -27,7 +27,7 @@ while true; do
 	printf "Here is a list of the printers recognized by this script.\n\t"
 	printf "%s\n\t" "[1] HP"
 	printf "%s\n\t" "[2] Canon"
-	printf "%s\n\t" "[3] Others"
+	printf "%s\n" "[3] Others"
 	printf "What is your printer model? "
 	read model
 	case $model in
