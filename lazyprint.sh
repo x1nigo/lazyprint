@@ -35,8 +35,8 @@ while true; do
 		*) printf "Please follow the instructions. Enter a number.\n" ;;
 	esac
 done
-# Prepare the necessary variables and/or help message in case your
-# printer isn't here.
+# Prepare the necessary variables to supply the right drivers
+# for your printer.
 case $model in
 	1) printer="hplip" ;;
 	2) printer="foomatic-db-ppds" ;;
