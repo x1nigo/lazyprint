@@ -47,3 +47,6 @@ esac
 
 # Download and install the printer gui and its corresponding driver.
 sudo pacman -S --noconfirm system-config-printer $printer
+
+# Closing message upon successfull install.
+printf "CONGRATULATIONS! You now have a working printer system.\n"
