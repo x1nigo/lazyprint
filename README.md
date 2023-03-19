@@ -11,6 +11,7 @@ Hence, I've decided to just put it all in a script to save me trouble.
 Clone the repository with the following command:
 ```
 git clone https://github.com/x1nigo/lazyprint.git
+cd lazyprint
 sh lazyprint.sh
 ```
 ## Note
